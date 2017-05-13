@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Dive #</th>
+      <th>Date</th>
+      <th>Country</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let journal of journals'>
+      <td>{{journal.diveNo}}</td>
+      <td>{{journal.date | date: 'dd/MM/yyyy'}}</td>
+      <td>{{journal.country}}</td>
+      <td>{{journal.location}}</td>
+    </tr>
+  </tbody>
+</table> 

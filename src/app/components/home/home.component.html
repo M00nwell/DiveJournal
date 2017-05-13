@@ -1,0 +1,9 @@
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>Dive Journal</h1>
+    <p>Your beautiful diving memories</p>
+    <a *ngIf='!this.firebaseService.currentUser' (click)='loginGoogle()'><img src="assets/img/google.png"></a> <br/>
+    <a *ngIf='!this.firebaseService.currentUser' (click)='loginFB()'><img src="assets/img/fb.png"></a>
+  </div>
+
+</div>

@@ -1,0 +1,10 @@
+<div *ngIf='journal'>
+<a [routerLink]="['/journal-list']" class="btn btn-primary">Go Back</a> 
+<br>
+
+<h2 class="page-header">{{journal.location}} <small>{{journal.country}}</small></h2>
+
+<br>
+<a class="btn btn-warning" style="float: right" (click)='deleteJournal()'>Delete</a>
+<a class="btn btn-success" style="float: right" (click)='editJournal()'>Edit</a>
+</div>

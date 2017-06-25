@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private firebaseService:FirebaseService,
+  constructor(public firebaseService:FirebaseService,
               private router: Router) { }
 
   ngOnInit() {
@@ -18,10 +18,6 @@ export class NavBarComponent implements OnInit {
   login() {
     this.firebaseService.login();
     this.firebaseService.user.subscribe(user => {
-      if(user)
-      {
-        location.reload();
-      }
     })  
   }
 

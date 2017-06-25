@@ -1,0 +1,42 @@
+
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Date and Location</legend>
+    <div class="form-group">
+      <label for="inputDiveNo" class="col-lg-2 control-label">Dive No:</label>
+      <div class="col-lg-10">
+        <input type="number" min="1" class="form-control" id="inputDiveNo" name="diveNo" [(ngModel)]='journal.diveNo'>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputDate" class="col-lg-2 control-label">Date:</label>
+      <div class="col-lg-10">
+        <input type="date" class="form-control" id="inputDate" name="date" [(ngModel)]='journal.date'>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputCountry" class="col-lg-2 control-label">Country:</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="inputCountry" name="country" [(ngModel)]='journal.country'>
+          <option *ngFor='let country of countries' [value]='country.name'>{{country.name}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputLocation" class="col-lg-2 control-label">Location:</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputLocation" name="location" [(ngModel)]='journal.location'>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="button" class="btn btn-default" (click)='activeModal.close()'>Cancel</button>
+        <button type="submit" class="btn btn-primary" (click)='submitClicked()'>Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

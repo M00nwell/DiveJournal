@@ -8,7 +8,7 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private firebaseService:FirebaseService) { }
+  constructor(public firebaseService:FirebaseService) { }
 
   ngOnInit() {
   }
